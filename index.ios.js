@@ -7,9 +7,10 @@ import Header from './src/components/header';
 // App Component
 // A Component is a JavaScript function that returns JSX
 // App Component is also our root component
+// Header Component is the child component of App component
 const App = () => (
   // this is JSX
-  <Header />
+  <Header headerText={'Albums!'} />
 );
 
 // Render the components
