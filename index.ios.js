@@ -1,6 +1,7 @@
 // Import libraries to create components
 import React from 'react';
-import { Text, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native';
+import Header from './src/components/header';
 
 // Code to create a component
 // App Component
@@ -8,7 +9,7 @@ import { Text, AppRegistry } from 'react-native';
 // App Component is also our root component
 const App = () => (
   // this is JSX
-  <Text>Hello World</Text>
+  <Header />
 );
 
 // Render the components
