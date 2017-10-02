@@ -12,7 +12,7 @@ import AlbumList from './src/components/AlbumList';
 const App = () => (
   // this is JSX
   <View>
-    <Header headerText={'Albums!'} />
+    <Header headerText={'Albums'} />
     <AlbumList />
   </View>
 );
