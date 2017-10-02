@@ -1,7 +1,8 @@
 // Import libraries to create components
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 // get your access token for free at spotify
 const accessToken = '';
@@ -22,7 +23,7 @@ class AlbumList extends Component {
   }
 
   renderAlbums() {
-    return this.state.albums.map(album => <Text key={album.id}>{album.name}</Text>);
+    return this.state.albums.map(album => <AlbumDetail key={album.id} album={album} />);
   }
 
   render() {
