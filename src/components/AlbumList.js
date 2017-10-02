@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import axios from 'axios';
 
+// get your access token for free at spotify
 const accessToken = '';
 
 // Code to create a Class Component
 // Class Components are used when we want to handle dynamic data
 class AlbumList extends Component {
+  state = { albums: [] };
+
   componentWillMount() {
     axios({
         method: 'get',
@@ -15,13 +18,18 @@ class AlbumList extends Component {
         headers: {
           Authorization: `Bearer ${accessToken}`
         }
-    }).then(response => console.log(response));
+    }).then(response => this.setState({ albums: response.data.albums.items }));
+  }
+
+  renderAlbums() {
+    return this.state.albums.map(album => <Text key={album.id}>{album.name}</Text>);
   }
 
   render() {
+    console.log(this.state);
     return (
       <View>
-        <Text>AlbumList</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
