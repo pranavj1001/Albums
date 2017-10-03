@@ -1,15 +1,22 @@
 // Import libraries to create components
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 
 const AlbumDetail = (props) => {
-  console.log(props);
+  function renderArtistNames() {
+    return props.album.artists.map(artist => <Text key={artist.id}>{artist.name}</Text>);
+  }
+
   return (
     <Card>
       <CardSection>
-        <Text>{props.album.name}</Text>
+        <View></View>
+        <View>
+          <Text>{props.album.name}</Text>
+          {renderArtistNames()}
+        </View>
       </CardSection>
     </Card>
   );
