@@ -13,13 +13,23 @@ const AlbumDetail = (props) => {
     <Card>
       <CardSection>
         <View></View>
-        <View>
-          <Text>{props.album.name}</Text>
+        <View style={styles.headerContentStyle}>
+          <Text style={styles.albumName}>{props.album.name}</Text>
           {renderArtistNames()}
         </View>
       </CardSection>
     </Card>
   );
+};
+
+const styles = {
+  headerContentStyle: {
+    flexDirection: 'column',
+    justifyContent: 'space-around'
+  },
+  albumName: {
+    fontWeight: '700'
+  }
 };
 
 export default AlbumDetail;
