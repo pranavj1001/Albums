@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import AlbumImage from './AlbumImage';
 
 const AlbumDetail = (props) => {
   function renderArtistNames() {
@@ -12,7 +13,9 @@ const AlbumDetail = (props) => {
   return (
     <Card>
       <CardSection>
-        <View></View>
+        <View>
+          <AlbumImage artist={props.album.artists[0].href} />
+        </View>
         <View style={styles.headerContentStyle}>
           <Text style={styles.albumName}>{props.album.name}</Text>
           {renderArtistNames()}
