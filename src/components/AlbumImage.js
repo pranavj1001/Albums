@@ -35,6 +35,6 @@ const styles = {
     width: 50,
     borderRadius: 25
   }
-}
+};
 
 export default AlbumImage;
