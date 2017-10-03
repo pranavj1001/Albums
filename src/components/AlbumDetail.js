@@ -10,14 +10,16 @@ const AlbumDetail = (props) => {
     return props.album.artists.map(artist => <Text key={artist.id}>{artist.name}</Text>);
   }
 
+  const { headerContentStyle, albumName } = styles;
+
   return (
     <Card>
       <CardSection>
         <View>
           <AlbumImage artist={props.album.artists[0].href} />
         </View>
-        <View style={styles.headerContentStyle}>
-          <Text style={styles.albumName}>{props.album.name}</Text>
+        <View style={headerContentStyle}>
+          <Text style={albumName}>{props.album.name}</Text>
           {renderArtistNames()}
         </View>
       </CardSection>
