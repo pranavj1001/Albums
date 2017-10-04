@@ -9,7 +9,9 @@ It can run on both ios and android devices.
 
 ## ScreenShot
 
-Will be uploaded soon
+<p align="center">
+<img src="ScreenShot.png">
+</p>
 
 ## To get started
 
