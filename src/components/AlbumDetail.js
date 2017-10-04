@@ -30,7 +30,9 @@ const AlbumDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={() => Linking.openURL(props.album.external_urls.spotify)}>View More</Button>
+        <Button onPress={() => Linking.openURL(props.album.external_urls.spotify)}>
+          View More
+        </Button>
       </CardSection>
     </Card>
   );
