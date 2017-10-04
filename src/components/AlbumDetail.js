@@ -4,6 +4,7 @@ import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import AlbumImage from './AlbumImage';
+import Button from './Button';
 
 const AlbumDetail = (props) => {
   function renderArtistNames() {
@@ -23,8 +24,13 @@ const AlbumDetail = (props) => {
           {renderArtistNames()}
         </View>
       </CardSection>
+
       <CardSection>
         <Image style={albumArt} source={{ uri: props.album.images[1].url }} />
+      </CardSection>
+
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
