@@ -1,6 +1,6 @@
 // Import libraries to create components
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import AlbumImage from './AlbumImage';
@@ -30,7 +30,7 @@ const AlbumDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress={() => console.log(props.album.name)} />
+        <Button onPress={() => Linking.openURL(props.album.external_urls.spotify)} />
       </CardSection>
     </Card>
   );
