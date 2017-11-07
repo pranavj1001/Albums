@@ -1,7 +1,7 @@
 // Import libraries to create components
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
-import Header from './src/components/Header';
+import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
 // Code to create a functional component
